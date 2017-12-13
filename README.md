@@ -29,10 +29,10 @@ Link to notebook: [Tutorial](Tutorial.ipynb)
 git clone https://github.com/FeatureLabs/predict_next_purchase.git
 ```
 
-2. Install the requierments
+2. Install the requirements
 
 ```
-pip install -r requierments.txt
+pip install -r requirements.txt
 ```
 
 3. Download the data
