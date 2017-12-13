@@ -4,7 +4,7 @@
     <img width=50% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" />
 </a>
 
-**As customers use your product, they leave behind a trail of behaviors that indicate how they will act in the future. Through automated feature engineering we can identify the predictive patterns in granular customer behavioral data that can be used to improve the customer's experience and generate additional revenue for the business.**
+**As customers use your product, they leave behind a trail of behaviors that indicate how they will act in the future. Through automated feature engineering we can identify the predictive patterns in granular customer behavioral data that can be used to improve the customer's experience and generate additional revenue for your business.**
 
 In this tutorial, we perform show how [Featuretools](https://www.featuretools.com) can be used to perform feature engineering on multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
 
@@ -14,7 +14,7 @@ In this tutorial, we perform show how [Featuretools](https://www.featuretools.co
 
 * We automatically generate 150+ features using Deep Feature Synthesis and selected the 20 most important features for predictive modeling
 * We build a pipeline that it can be reused for numerous prediction problem (you can try this yourself!)
-* We quickly develop a model on a subset of the data and validate on the entire dataset in a scalabe manner using [Dask](http://dask.pydata.org/en/latest/).
+* We quickly develop a model on a subset of the data and validate on the entire dataset in a scalable manner using [Dask](http://dask.pydata.org/en/latest/).
 
 ## Read the tutorial
 
