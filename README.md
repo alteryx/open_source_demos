@@ -26,7 +26,7 @@ Link to notebook: [Tutorial](Tutorial.ipynb)
 1. Clone the repo
 
 ```
-git clone https://github.com/FeatureLabs/predict_next_purchase.git
+git clone https://github.com/Featuretools/predict_next_purchase.git
 ```
 
 2. Install the requirements
