@@ -52,7 +52,7 @@ Expect this command to take up to 20 minutes to run as it prepares the data for 
 
 
 <a href="https://www.featurelabs.com/">
-    <img src="https://www.featurelabs.com/img/logo.png" alt="Featuretools" />
+    <img src="http://www.featurelabs.com/wp-content/uploads/2017/12/logo.png" alt="Featuretools" />
 </a>
 
 
