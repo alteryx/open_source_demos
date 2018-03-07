@@ -96,7 +96,7 @@ def dask_make_labels(es, **kwargs):
     return label_times, es
 
 
-def calculate_feture_matrix(label_times, features):
+def calculate_feature_matrix(label_times, features):
     label_times, es = label_times
     fm = ft.calculate_feature_matrix(features,
                                      entityset=es,
