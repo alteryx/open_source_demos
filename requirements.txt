@@ -1,4 +1,4 @@
-featuretools==0.1.14
+featuretools>=0.2.0
 scikit-learn==0.19.1
 tqdm==4.9.0
 dask==0.16.0
