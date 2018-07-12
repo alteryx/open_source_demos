@@ -20,7 +20,7 @@ def load_entityset(data_dir):
         order_time = df.columns.tolist().index("order_time")
 
         df.iloc[0, order_time] = pd.Timestamp('Jan 1, 2015') +  pd.Timedelta(df.iloc[0, hour_of_day], "h")
-        for i in xrange(1, df.shape[0]):
+        for i in range(1, df.shape[0]):
             df.iloc[i, order_time] = df.iloc[i-1, order_time] \
                                         + pd.Timedelta(df.iloc[i, days_since], "d") \
                                         + pd.Timedelta(df.iloc[i, hour_of_day], "h")
@@ -115,6 +115,6 @@ def feature_importances(model, features, n=10):
     importances = model.feature_importances_
     zipped = sorted(zip(features, importances), key=lambda x: -x[1])
     for i, f in enumerate(zipped[:n]):
-        print "%d: Feature: %s, %.3f" % (i+1, f[0].get_name(), f[1])
+        print("%d: Feature: %s, %.3f" % (i+1, f[0].get_name(), f[1]))
 
     return [f[0] for f in zipped[:n]]
