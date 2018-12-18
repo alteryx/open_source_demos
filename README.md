@@ -16,37 +16,34 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
 * We build a pipeline that it can be reused for numerous prediction problems (you can try this yourself!)
 * We quickly develop a model on a subset of the data and validate on the entire dataset in a scalable manner using [Dask](http://dask.pydata.org/en/latest/).
 
-## Read the tutorial
-
-Link to notebook: [Tutorial](Tutorial.ipynb)
-
-
 ## Running the tutorial
 
 1. Clone the repo
 
-```
-git clone https://github.com/Featuretools/predict_next_purchase.git
-```
+    ```
+    git clone https://github.com/Featuretools/predict_next_purchase.git
+    ```
 
 2. Install the requirements
 
-```
-pip install -r requirements.txt
-```
+    ```
+    pip install -r requirements.txt
+    ```
 
 3. Download the data
 
-You can download the data directly from Instacart [here](https://www.instacart.com/datasets/grocery-shopping-2017).
+    You can download the data directly from Instacart [here](https://www.instacart.com/datasets/grocery-shopping-2017).
 
-After downloading the data save the CSVs to a directory called `data` in the root of this repository. Then run the following command in your terminal from the root of this repo.
+    After downloading the data save the CSVs to a directory called `data` in the root of this repository. Then run the following command in your terminal from the root of this repo.
 
-```
->> python process_data.py
- 70%|██████████████████████████▌           | 145/207 [07:43<03:18,  3.20s/it]
-```
+    ```
+    >> python process_data.py
+     70%|██████████████████████████▌           | 145/207 [07:43<03:18,  3.20s/it]
+    ```
+    *Note: Expect this command to take up to 20 minutes to run as it prepares the data for the tutorial notebook*
 
-Expect this command to take up to 20 minutes to run as it prepares the data for the tutorial notebook
+4. Run the [Tutorial](Tutorial.ipynb) notebooks:
+
 
 ## Feature Labs
 <a href="https://www.featurelabs.com/">
