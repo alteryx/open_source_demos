@@ -1,5 +1,6 @@
-featuretools>=0.2.0
-dask>=0.18.2
-jupyter==1.0.0
-scikit-learn==0.19.1
-tqdm>=4.9.0
+featuretools>=0.5.1
+scikit-learn>=0.20.1
+tqdm>=4.19.2
+dask>=1.0.0
+jupyter>=1.0.0
+jupyterlab>=0.33.12
