@@ -44,15 +44,15 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
 
 4. Run the [Tutorial](Tutorial.ipynb) using Jupyter
 
-  ```
-  jupyter notebook
-  ```
+    ```
+    jupyter notebook
+    ```
 
-  or
+    or
 
-  ```
-  jupyter lab
-  ```
+    ```
+    jupyter lab
+    ```
 
 ## Feature Labs
 <a href="https://www.featurelabs.com/">
