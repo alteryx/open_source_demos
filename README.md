@@ -42,8 +42,17 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
     ```
     *Note: Expect this command to take up to 20 minutes to run as it prepares the data for the tutorial notebook*
 
-4. Run the [Tutorial](Tutorial.ipynb) notebooks:
+4. Run the [Tutorial](Tutorial.ipynb) using Jupyter
 
+  ```
+  jupyter notebook
+  ```
+
+  or
+
+  ```
+  jupyter lab
+  ```
 
 ## Feature Labs
 <a href="https://www.featurelabs.com/">
