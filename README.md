@@ -48,12 +48,6 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
     jupyter notebook
     ```
 
-    or
-
-    ```
-    jupyter lab
-    ```
-
 ## Feature Labs
 <a href="https://www.featurelabs.com/">
     <img src="http://www.featurelabs.com/wp-content/uploads/2017/12/logo.png" alt="Featuretools" />
