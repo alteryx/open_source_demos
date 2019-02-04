@@ -29,7 +29,9 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
     ```
     pip install -r requirements.txt
     ```
-
+    
+    *You will also need to install **graphviz** for this demo. Please install graphviz according to the instructions in the [Featuretools Documentation](https://docs.featuretools.com/getting_started/install.html)*
+    
 3. Download the data
 
     You can download the data directly from Instacart [here](https://www.instacart.com/datasets/grocery-shopping-2017).
