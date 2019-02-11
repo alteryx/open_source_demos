@@ -10,6 +10,10 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
 
 *Note: If you are running this notebook yourself, refer to the read me on Github for instructions to download the Instacart dataset*
 
+<a href="https://colab.research.google.com/github/featuretools/predict-next-purchase/blob/colab/Tutorial.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 ## Highlights
 
 * We automatically generate 150+ features using Deep Feature Synthesis and select the 20 most important features for predictive modeling
