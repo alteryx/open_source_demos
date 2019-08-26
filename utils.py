@@ -3,11 +3,20 @@ import pandas as pd
 import numpy as np
 import os
 
-def load_entityset(data_dir):
-    order_products = pd.read_csv(os.path.join(data_dir, "order_products__prior.csv"))
-    orders = pd.read_csv(os.path.join(data_dir, "orders.csv"))
-    departments = pd.read_csv(os.path.join(data_dir, "departments.csv"))
-    products = pd.read_csv(os.path.join(data_dir, "products.csv"))
+def load_order_products(data_dir, nrows=None):
+    order_products = pd.read_csv(os.path.join(data_dir, "order_products__prior.csv"), nrows=nrows)
+    departments = pd.read_csv(os.path.join(data_dir, "departments.csv"), nrows=nrows)
+    products = pd.read_csv(os.path.join(data_dir, "products.csv"), nrows=nrows)
+    order_products = order_products.merge(products).merge(departments)
+    return order_products
+
+
+
+def load_entityset(data_dir, nrows=None):
+    order_products = pd.read_csv(os.path.join(data_dir, "order_products__prior.csv"), nrows=nrows)
+    orders = pd.read_csv(os.path.join(data_dir, "orders.csv"), nrows=nrows)
+    departments = pd.read_csv(os.path.join(data_dir, "departments.csv"), nrows=nrows)
+    products = pd.read_csv(os.path.join(data_dir, "products.csv"), nrows=nrows)
 
     order_products = order_products.merge(products).merge(departments)
 
