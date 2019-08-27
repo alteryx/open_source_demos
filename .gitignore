@@ -1,6 +1,4 @@
-# IDE
 .vscode
-
 partitioned_1000/*
 data/*
 partitioned_data/*
