@@ -4,4 +4,4 @@ tqdm>=4.19.2
 dask>=1.0.0
 jupyter>=1.0.0
 graphviz>=0.10.1
-composeml>=0.1.5
+composeml>=0.1.6
