@@ -13,7 +13,7 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
 ## Highlights
 
 * We automatically generate 150+ features using Deep Feature Synthesis and select the 20 most important features for predictive modeling
-* We build a pipeline that it can be reused for numerous prediction problems (you can try this yourself!)
+* We automatically generate label times using [Compose](https://compose.featurelabs.com) which can be reused for numerous prediction problems (you can try this yourself!)
 * We quickly develop a model on a subset of the data and validate on the entire dataset in a scalable manner using [Dask](http://dask.pydata.org/en/latest/).
 
 ## Running the tutorial
