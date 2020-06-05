@@ -36,14 +36,14 @@ There are two different tutorials included. The notebook `Tutorial.ipynb` demons
 
     In order to run `Tutorial-with-Dask_EntitySet.ipynb`, you will need to use Featuretools version 0.16.0 or newer. You can install this using pip:
     ```
-    pip install "featuretools>=0.16.0
+    pip install "featuretools>=0.16.0"
     ```
     
 3. Download the data
 
     You can download the data directly from Instacart [here](https://www.instacart.com/datasets/grocery-shopping-2017).
 
-    After downloading the data save the CSVs to a directory called `data` in the root of this repository. 
+    After downloading the data, save the CSVs to a directory called `data` in the root of this repository. 
 
 4. Partition the data (only required for `Tutorial.ipynb`)
     If you plan to run `Tutorial.ipynb`, you need to partition the data before running the notebook. If you are running `Tutorial-with-Dask-EntitySet.ipynb`, you can skip to step 5.
