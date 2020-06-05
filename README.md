@@ -34,10 +34,7 @@ There are two different tutorials included. The notebook `Tutorial.ipynb` demons
     
     *You will also need to install **graphviz** for this demo. Please install graphviz according to the instructions in the [Featuretools Documentation](https://docs.featuretools.com/getting_started/install.html)*
 
-    In order to run `Tutorial-with-Dask_EntitySet.ipynb`, you will need to use Featuretools version 0.16.0 or newer. You can install this using pip:
-    ```
-    pip install "featuretools>=0.16.0"
-    ```
+    *Note: In order to run `Tutorial-with-Dask_EntitySet.ipynb`, you will need to use Featuretools version 0.16.0 or newer.*
     
 3. Download the data
 
