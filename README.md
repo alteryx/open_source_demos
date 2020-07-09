@@ -6,9 +6,7 @@
 
 **As customers use your product, they leave behind a trail of behaviors that indicate how they will act in the future. Through automated feature engineering we can identify the predictive patterns in granular customer behavioral data that can be used to improve the customer's experience and generate additional revenue for your business.**
 
-In these tutorials, we show how [Featuretools](https://www.featuretools.com) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
-
-There are two different tutorials included. The notebook `Tutorial.ipynb` demonstrates how to perform feature engineering at scale with Dask by partitioning a dataset. The notebook `Tutorial-with-Dask-EntitySet.ipynb` demonstrates another approach to generate a feature matrix by using a Dask EntitySet, without the need for partitioning the data.
+In this tutorial, we show how [Featuretools](https://www.featuretools.com) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
 
 *Note: If you are running this notebook yourself, refer to the read me on Github for instructions to download the Instacart dataset*
 
@@ -34,7 +32,7 @@ There are two different tutorials included. The notebook `Tutorial.ipynb` demons
     
     *You will also need to install **graphviz** for this demo. Please install graphviz according to the instructions in the [Featuretools Documentation](https://docs.featuretools.com/getting_started/install.html)*
 
-    *Note: In order to run `Tutorial-with-Dask_EntitySet.ipynb`, you will need to use Featuretools version 0.16.0 or newer.*
+    *Note: In order to run the tutorial, you will need to use Featuretools version 0.16.0 or newer.*
     
 3. Download the data
 
@@ -42,19 +40,7 @@ There are two different tutorials included. The notebook `Tutorial.ipynb` demons
 
     After downloading the data, save the CSVs to a directory called `data` in the root of this repository. 
 
-4. Partition the data (only required for `Tutorial.ipynb`)
-
-    If you plan to run `Tutorial.ipynb`, you need to partition the data before running the notebook. If you are running `Tutorial-with-Dask-EntitySet.ipynb`, you can skip to step 5.
-    
-    To partition the data, run the following command in your terminal from the root of this repo.
-
-    ```
-    >> python process_data.py
-     70%|██████████████████████████▌           | 145/207 [07:43<03:18,  3.20s/it]
-    ```
-    *Note: Expect this command to take up to 20 minutes to run as it prepares the data for the tutorial notebook*
-
-5. Run [Tutorial](Tutorial.ipynb) or [Tutorial-with-Dask-EntitySet](Tutorial-with-Dask-EntitySet.ipynb) using Jupyter
+4. Run the [Tutorial](Tutorial.ipynb) using Jupyter
 
     ```
     jupyter notebook
