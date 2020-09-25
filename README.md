@@ -37,7 +37,7 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
 
 3. Download the data
 
-    You can download the data directly from Instacart [here](https://www.instacart.com/datasets/grocery-shopping-2017).
+    You can download the data directly from Instacart [here](https://www.kaggle.com/c/instacart-market-basket-analysis/data).
 
     After downloading the data, save the CSVs to a directory called `data` in the root of this repository. 
 
