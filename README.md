@@ -1,12 +1,12 @@
 # Predicting a customer's next purchase using automated feature engineering
 
-<a style="margin:30px" href="https://www.featuretools.com">
+<a style="margin:30px" href="https://github.com/FeatureLabs/featuretools">
     <img width=50% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" />
 </a>
 
 **As customers use your product, they leave behind a trail of behaviors that indicate how they will act in the future. Through automated feature engineering we can identify the predictive patterns in granular customer behavioral data that can be used to improve the customer's experience and generate additional revenue for your business.**
 
-In this tutorial, we show how [Featuretools](https://www.featuretools.com) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
+In this tutorial, we show how [Featuretools](https://github.com/FeatureLabs/featuretools) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
 
 *Note: If you are running this notebook yourself, refer to the read me on Github for instructions to download the Instacart dataset*
 
