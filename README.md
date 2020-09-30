@@ -1,12 +1,12 @@
 # Predicting a customer's next purchase using automated feature engineering
 
-<a style="margin:30px" href="https://www.featuretools.com">
+<a style="margin:30px" href="https://github.com/FeatureLabs/featuretools">
     <img width=50% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" />
 </a>
 
 **As customers use your product, they leave behind a trail of behaviors that indicate how they will act in the future. Through automated feature engineering we can identify the predictive patterns in granular customer behavioral data that can be used to improve the customer's experience and generate additional revenue for your business.**
 
-In this tutorial, we show how [Featuretools](https://www.featuretools.com) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
+In this tutorial, we show how [Featuretools](https://github.com/FeatureLabs/featuretools) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
 
 *Note: If you are running this notebook yourself, refer to the read me on Github for instructions to download the Instacart dataset*
 
@@ -31,18 +31,15 @@ In this tutorial, we show how [Featuretools](https://www.featuretools.com) can b
     ```
     
     *You will also need to install **graphviz** for this demo. Please install graphviz according to the instructions in the [Featuretools Documentation](https://docs.featuretools.com/)*
-    
+
+    *Note: In order to run the tutorial, you will need to use Featuretools version 0.16.0 or newer.*
+
+
 3. Download the data
 
-    You can download the data directly from Instacart [here](https://www.instacart.com/datasets/grocery-shopping-2017).
+    You can download the data directly from Instacart [here](https://www.kaggle.com/c/instacart-market-basket-analysis/data).
 
-    After downloading the data save the CSVs to a directory called `data` in the root of this repository. Then run the following command in your terminal from the root of this repo.
-
-    ```
-    >> python process_data.py
-     70%|██████████████████████████▌           | 145/207 [07:43<03:18,  3.20s/it]
-    ```
-    *Note: Expect this command to take up to 20 minutes to run as it prepares the data for the tutorial notebook*
+    After downloading the data, save the CSVs to a directory called `data` in the root of this repository. 
 
 4. Run the [Tutorial](Tutorial.ipynb) using Jupyter
 
