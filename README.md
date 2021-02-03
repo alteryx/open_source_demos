@@ -1,59 +1,34 @@
-# Predicting a customer's next purchase using automated feature engineering
+# Alteryx Open Source Demos 
 
-<a style="margin:30px" href="https://github.com/FeatureLabs/featuretools">
-    <img width=50% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" />
-</a>
+<div class="row">
+    <a href="https://evalml.alteryx.com/">
+        <img width=40% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="EvalML" />
+    </a>
+    <a href="https://www.featurelabs.com/">
+        <img src="http://www.featurelabs.com/wp-content/uploads/2017/12/logo.png" alt="Featuretools" />
+    </a>
+</div>
 
-**As customers use your product, they leave behind a trail of behaviors that indicate how they will act in the future. Through automated feature engineering we can identify the predictive patterns in granular customer behavioral data that can be used to improve the customer's experience and generate additional revenue for your business.**
+This repository consists of a series of demos that leverage **EvalML**, **Featuretools**, **Woodwork**, and **Compose**. The demos rely on a different subset of these libraries and to various levels of complexity.
 
-In this tutorial, we show how [Featuretools](https://github.com/FeatureLabs/featuretools) can be used to perform feature engineering on a multi-table dataset of 3 million online grocery orders provided by Instacart to train an accurate machine learning model to predict what product a customer buys next.
+Building an accurate machine learning model requires several important steps. One of the most complex and time consuming is extracting information through features. Finding the right features is a crucial component of both interpreting the dataset as a whole as well as building a model with great predictive power. Another core component of any machine learning process is selecting the right estimator to use for the problem at hand. By combining the best features with the most accurate estimator and its corresponding hyperparameters, we can build a machine learning model that can generalize well to unknown data. Just as the process of feature engineering is made simple by Featuretools, we have made automated machine learning easy to implement using EvalML.
 
-*Note: If you are running this notebook yourself, refer to the read me on Github for instructions to download the Instacart dataset*
+## Running these tutorials
 
-## Highlights
+1. Clone the repository.
 
-* We automatically generate 150+ features using Deep Feature Synthesis and select the 20 most important features for predictive modeling
-* We automatically generate label times using [Compose](https://github.com/FeatureLabs/compose) which can be reused for numerous prediction problems (you can try this yourself!)
-* We quickly develop a model on a subset of the data and validate on the entire dataset in a scalable manner using [Dask](http://dask.pydata.org/en/latest/).
+    `git clone https://github.com/alteryx/open-source-demos`
 
-## Running the tutorial
+2. Install the requirements. It's recommended to create a new environment to work in to install these libraries separately.
 
-1. Clone the repo
-
-    ```
-    git clone https://github.com/Featuretools/predict_next_purchase.git
-    ```
-
-2. Install the requirements
-
-    ```
-    pip install -r requirements.txt
-    ```
+    `pip install -r requirements.txt`
     
-    *You will also need to install **graphviz** for this demo. Please install graphviz according to the instructions in the [Featuretools Documentation](https://docs.featuretools.com/)*
+    In order to properly execute the demos, please install **Graphviz** according to the Featuretools [documentation](https://featuretools.alteryx.com/en/stable/install.html?highlight=graphviz#installing-graphviz).
 
-    *Note: In order to run the tutorial, you will need to use Featuretools version 0.16.0 or newer.*
+3. Download the data.
 
+    You can download the data for each demo by following the instructions in each tutorial. The dataset will usually be kept in a folder named `data` within the         project structure.
 
-3. Download the data
+4. The tutorials can be run in Jupyter Notebook.
 
-    You can download the data directly from Instacart [here](https://www.kaggle.com/c/instacart-market-basket-analysis/data).
-
-    After downloading the data, save the CSVs to a directory called `data` in the root of this repository. 
-
-4. Run the [Tutorial](Tutorial.ipynb) using Jupyter
-
-    ```
-    jupyter notebook
-    ```
-
-## Feature Labs
-<a href="https://www.featurelabs.com/">
-    <img src="http://www.featurelabs.com/wp-content/uploads/2017/12/logo.png" alt="Featuretools" />
-</a>
-
-Featuretools is an open source project created by [Feature Labs](https://www.featurelabs.com/). To see the other open source projects we're working on visit Feature Labs [Open Source](https://www.featurelabs.com/open). If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.featurelabs.com/contact).
-
-### Contact
-
-Any questions can be directed to help@featurelabs.com
+    `jupyter notebook`
