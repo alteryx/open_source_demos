@@ -20,4 +20,4 @@ jobs:
         python -m virtualenv venv
         source venv/bin/activate
         python -m pip install -r requirements.txt
-        make checkdeps OUTPUT_FILEPATH=tests/requirement_files/latest_core_dependencies.txt
+        make checkdeps OUTPUT_FILEPATH=utils/latest_core_dependencies.txt
