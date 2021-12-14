@@ -109,14 +109,7 @@ def cli():
 @cli.command()
 def standardize():
     notebooks = _get_ipython_notebooks(DOCS_PATH)
-    executed_notebooks, empty_cells, versions = _get_notebooks_with_executions_and_empty(notebooks)
-    if executed_notebooks:
-        _standardize_outputs(executed_notebooks)
-        executed_notebooks = ["\t" + notebook for notebook in executed_notebooks]
-        executed_notebooks = "\n".join(executed_notebooks)
-        click.echo(
-            f"Removed the outputs for:\n {executed_notebooks}"
-        )
+    _, empty_cells, versions = _get_notebooks_with_executions_and_empty(notebooks)
     if empty_cells:
         _remove_notebook_empty_last_cell(empty_cells)
         empty_cells = ["\t" + notebook for notebook in empty_cells]
@@ -136,14 +129,7 @@ def standardize():
 @cli.command()
 def check_execution():
     notebooks = _get_ipython_notebooks(DOCS_PATH)
-    executed_notebooks, empty_cells, versions = _get_notebooks_with_executions_and_empty(notebooks)
-    if executed_notebooks:
-        executed_notebooks = ["\t" + notebook for notebook in executed_notebooks]
-        executed_notebooks = "\n".join(executed_notebooks)
-        raise SystemExit(
-            f"The following notebooks have executed outputs:\n {executed_notebooks}\n"
-            "Please run make lint-fix to fix this."
-        )
+    _, empty_cells, versions = _get_notebooks_with_executions_and_empty(notebooks)
     if empty_cells:
         empty_cells = ["\t" + notebook for notebook in empty_cells]
         empty_cells = "\n".join(empty_cells)
