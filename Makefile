@@ -6,14 +6,6 @@ clean:
 	find . -name '*~' -delete
 	find . -name '.coverage.*' -delete
 
-.PHONY: lint
-lint:
-	python utils/notebook_version_standardizer.py check-execution
-
-.PHONY: lint-fix
-lint-fix:
-	python utils/notebook_version_standardizer.py standardize
-
 .PHONY: checkdeps
 checkdeps:
 	$(eval allow_list='featuretools|composeml|evalml|woodwork|bokeh')
