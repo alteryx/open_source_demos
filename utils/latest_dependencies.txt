@@ -1,3 +1,3 @@
 evalml==0.39.0
 featuretools==1.3.0
--e git+ssh://git@github.com/alteryx/woodwork.git@90beed66fcbcf9d790d3d5cfd9ad9660b8fde14e#egg=woodwork
+woodwork==0.10.0
