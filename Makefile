@@ -8,5 +8,5 @@ clean:
 
 .PHONY: checkdeps
 checkdeps:
-	$(eval allow_list='featuretools|composeml|evalml|woodwork|bokeh')
+	$(eval allow_list='featuretools|composeml|evalml|woodwork')
 	pip freeze | grep -v "open_source_demos.git" | grep -E $(allow_list) > $(OUTPUT_FILEPATH)
