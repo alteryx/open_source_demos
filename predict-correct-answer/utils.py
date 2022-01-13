@@ -21,7 +21,7 @@ def datashop_to_entityset(filename):
     #
 
     # Convert the csv into a dataframe using pandas
-    data = pd.read_csv(filename, '\t', parse_dates=True)
+    data = pd.read_csv(filename, delimiter='\t', parse_dates=True)
 
     # Make the Transaction Id the index column of the dataframe and clean other columns
     data.index = data['Transaction Id']
@@ -44,7 +44,7 @@ def datashop_to_entityset(filename):
     es.add_dataframe(dataframe_name='transactions',
                      index='Transaction Id',
                      dataframe=data,
-                     logical_types={'Outcome': "Boolean", 'Attempt At Step': "Categorical"},
+                     logical_types={'Outcome': "BooleanNullable", 'Attempt At Step': "Categorical"},
                      time_index='Time',
                      secondary_time_index={'End Time': [
                         'Outcome', 'Is Last Attempt', 'Duration (sec)']}
