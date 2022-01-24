@@ -1,11 +1,8 @@
 # Alteryx Open Source Demos 
 
 <div class="row">
-    <a href="https://evalml.alteryx.com/">
-        <img width=40% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="EvalML" />
-    </a>
-    <a href="https://www.featurelabs.com/">
-        <img src="http://www.featurelabs.com/wp-content/uploads/2017/12/logo.png" alt="Featuretools" />
+    <a href="https://www.alteryx.com/open-source">
+        <img width=100% src="https://woodwork-web-images.s3.amazonaws.com/alteryx-oss-libraries.png" alt="Alteryx Open Source Tools" />
     </a>
 </div>
 
@@ -32,3 +29,9 @@ Building an accurate machine learning model requires several important steps. On
 4. The tutorials can be run in Jupyter Notebook.
 
     `jupyter notebook`
+
+## Built at Alteryx Innovation Labs
+
+<a href="https://www.alteryx.com/innovation-labs">
+    <img src="https://evalml-web-images.s3.amazonaws.com/alteryx_innovation_labs.png" alt="Alteryx Innovation Labs" />
+</a>

@@ -1,9 +1,11 @@
 .DS_Store
 .vscode
 partitioned_1000/*
-data/*
+data/
+dask-worker-space/
 partitioned_data/*
 top_features
+
 
 
 # Byte-compiled / optimized / DLL files
