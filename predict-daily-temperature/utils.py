@@ -48,3 +48,19 @@ def feature_importances(X, reg, feats=5):
         print('{}: {} [{:.3f}]'.format(i + 1, f[1], f[0]))
     print('-----\n')
     return [f[1] for f in feature_imps[:feats]]
+
+
+def remove_nans(time_target_fs, target_col):
+    # remove nans
+    max_nans = 0
+    for col in time_target_fs.columns:
+        max_nans = max(time_target_fs[col].isna().sum(), max_nans)
+
+    if max_nans:
+        time_target_fs = time_target_fs.iloc[max_nans:]
+
+# --> just pull this out
+    X = time_target_fs
+
+    y = X.pop(target_col)
+    return X, y
