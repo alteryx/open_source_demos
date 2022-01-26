@@ -64,3 +64,13 @@ def remove_nans(time_target_fs, target_col):
 
     y = X.pop(target_col)
     return X, y
+
+
+def split_with_gap(df, gap, test_size=.2):
+    split_point = int(df.shape[0]*(1 - test_size))
+
+    # leave gap observations between training and test datasets
+    training_data = df[:split_point]
+    test_data = df[(split_point + gap):]
+
+    return training_data, test_data
