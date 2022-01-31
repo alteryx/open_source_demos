@@ -4,7 +4,7 @@ composeml>=0.8.0
 # dask[bag]>=1.0.0
 evalml==0.41.0
 featuretools==1.4.0
-featuretools_tsfresh_primitives=1.0.2
+featuretools_tsfresh_primitives==1.0.2
 # findspark==1.4.2
 # graphviz>=0.10.1
 # ipython>=5.8.0
