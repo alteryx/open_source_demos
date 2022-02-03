@@ -18,7 +18,7 @@ We'll demonstrate several end-to-end workflows, starting with a baseline workflo
 
 ## Running the tutorial
 
-The data can be found in the `dataset` directory, so the notebook can be run without having to download any extra data.
+The data can be found in the `dataset` directory, so the notebook can be run without having to download any additional data.
 
 ## Alteryx
 
