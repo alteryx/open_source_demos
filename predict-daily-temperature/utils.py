@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import featuretools as ft
 
 plt.rcdefaults()
 
@@ -46,3 +47,13 @@ def feature_importances(X, reg, feats=5):
         print('{}: {} [{:.3f}]'.format(i + 1, f[1], f[0]))
     print('-----\n')
     return [f[1] for f in feature_imps[:feats]]
+
+
+def set_up_entityset(df, id='es', time_index=None):
+    es = ft.EntitySet(id=id)
+    es.add_dataframe(df.copy(),
+                     dataframe_name='temperatures',
+                     index='id',
+                     make_index=True,
+                     time_index=time_index)
+    return es
