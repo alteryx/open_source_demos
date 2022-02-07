@@ -13,7 +13,7 @@ We'll demonstrate several end-to-end workflows, starting with a baseline workflo
 
 - Understand what makes a time series problem different from other machine learning problems
 - Show the impact that time series feature engineering has on our model
-- Quickly make end-to-end workflow using time-series data and time series modeling concepts
+- Quickly make end-to-end workflow using time series data and time series modeling concepts
 - Use AutoMLSearch to perform automated time series machine learning
 
 ## Running the tutorial

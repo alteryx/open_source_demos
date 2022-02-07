@@ -51,7 +51,7 @@ def feature_importances(X, reg, feats=5):
 
 def set_up_entityset(df, id='es', time_index=None):
     es = ft.EntitySet(id=id)
-    es.add_dataframe(df.copy(),
+    es.add_dataframe(df,
                      dataframe_name='temperatures',
                      index='id',
                      make_index=True,
