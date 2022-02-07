@@ -22,5 +22,8 @@ The data can be found in the `dataset` directory, so the notebook can be run wit
 
 ## Alteryx
 
-![OpenSource](img/OpenSource_Logo-01.png)
+<p align="center">
+<img width=50% src="https://alteryx-open-source-images.s3.amazonaws.com/OpenSource_Logo-01.jpg" alt="ayx_os" />
+</p>
+
 Featuretools and EvalML were created by the developers at [Alteryx](https://www.alteryx.com). If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.alteryx.com/contact-us/).
