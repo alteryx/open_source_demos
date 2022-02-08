@@ -5,7 +5,7 @@
     <img width=50% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="Featuretools" />
 </p>
 
-This dataset in this problem only contains two colmns--a time index and a target daily temperatures column. Solving this problem as a univariate time series problem lets us build a rich set of features and a useful machine learning model. We can automate the process using both [Featuretools](https://www.featuretools.com) for time series feature engineering and [EvalML](https://github.com/alteryx/evalml) for performing automated time series regression.
+This dataset in this problem only contains two columns--a time index and a target daily temperatures column. Solving this problem as a univariate time series problem lets us build a rich set of features and a useful machine learning model. We can automate the process using both [Featuretools](https://www.featuretools.com) for time series feature engineering and [EvalML](https://github.com/alteryx/evalml) for performing automated time series regression.
 
 We'll demonstrate several end-to-end workflows, starting with a baseline workflow, then moving to one where we build our features using Featuretools, and finally handling everything inside of EvalML.
 
