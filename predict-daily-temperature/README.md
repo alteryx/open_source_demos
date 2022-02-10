@@ -5,7 +5,9 @@
     <img width=50% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="Featuretools" />
 </p>
 
-This dataset in this problem only contains two columns--a time index and a target daily temperatures column. Solving this problem as a univariate time series problem lets us build a rich set of features and a useful machine learning model. We can automate the process using both [Featuretools](https://www.featuretools.com) for time series feature engineering and [EvalML](https://github.com/alteryx/evalml) for performing automated time series regression.
+In this tutorial, we show how Featuretools and EvalML can be used to automate time series forecasting bu predicting future daily temperatures using historical daily temperature data.
+
+This dataset in this tutorial only contains two columns--a time index and a target daily temperatures column. Solving this problem as a univariate time series problem lets us build a rich set of features and a useful machine learning model. We can automate the process using both [Featuretools](https://www.featuretools.com) for time series feature engineering and [EvalML](https://github.com/alteryx/evalml) for performing automated time series regression.
 
 We'll demonstrate several end-to-end workflows, starting with a baseline workflow, then moving to one where we build our features using Featuretools, and finally handling everything inside of EvalML.
 
@@ -26,4 +28,4 @@ The data can be found in the `dataset` directory, so the notebook can be run wit
 <img width=50% src="https://alteryx-open-source-images.s3.amazonaws.com/OpenSource_Logo-01.jpg" alt="ayx_os" />
 </p>
 
-Featuretools and EvalML were created by the developers at [Alteryx](https://www.alteryx.com). If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.alteryx.com/contact-us/).
+This is a demo created & maintained by [Alteryx](https://www.alteryx.com). It uses **Featuretools** and **EvalML**, which are open source libraries maintained by Alteryx. To see the other open source projects we’re working on visit Alteryx Open Source. If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.alteryx.com/contact-us/).
