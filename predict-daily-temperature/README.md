@@ -1,9 +1,11 @@
 # Predicting Daily Temperature
 
-<p style="margin:30px">
-    <img style="display:inline; margin-right:50px" width=40% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" href="https://google.com"/>
-    <img width=40% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="Featuretools" href="https://google.com"/>
-</p>
+<a style="margin:30px" href="https://www.featuretools.com">
+    <img width=40% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" />
+</a>
+<a style="margin:30px" href="https://evalml.alteryx.com/en/stable/index.html">
+    <img width=40% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="EvalML" />
+</a>
 
 In this tutorial, we show how Featuretools and EvalML can be used to automate time series forecasting bu predicting future daily temperatures using historical daily temperature data.
 
