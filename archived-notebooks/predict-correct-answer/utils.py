@@ -1,3 +1,4 @@
+import featuretools.variable_types as vtypes
 import pandas as pd
 import featuretools as ft
 from featuretools.primitives import Sum, Mean, Hour
@@ -21,7 +22,7 @@ def datashop_to_entityset(filename):
     #
 
     # Convert the csv into a dataframe using pandas
-    data = pd.read_csv(filename, delimiter='\t', parse_dates=True)
+    data = pd.read_csv(filename, '\t', parse_dates=True)
 
     # Make the Transaction Id the index column of the dataframe and clean other columns
     data.index = data['Transaction Id']
@@ -41,58 +42,58 @@ def datashop_to_entityset(filename):
     # Now we start making an entityset. We make 'End Time' a time index for 'Outcome'
     # even though our primary time index for a row is 'Time' preventing label leakage.
     es = ft.EntitySet('Dataset')
-    es.add_dataframe(dataframe_name='transactions',
-                     index='Transaction Id',
-                     dataframe=data,
-                     logical_types={'Outcome': "BooleanNullable", 'Attempt At Step': "Categorical"},
-                     time_index='Time',
-                     secondary_time_index={'End Time': [
-                        'Outcome', 'Is Last Attempt', 'Duration (sec)']}
-                    )
+    es.entity_from_dataframe(entity_id='transactions',
+                             index='Transaction Id',
+                             dataframe=data,
+                             variable_types={'Outcome': vtypes.Boolean, 'Attempt At Step': vtypes.Categorical},
+                             time_index='Time',
+                             secondary_time_index={'End Time': [
+                                 'Outcome', 'Is Last Attempt', 'Duration (sec)']}
+                             )
 
     # Every transaction has a `problem_step` which is associated to a problem
-    es.normalize_dataframe(base_dataframe_name='transactions',
-                           new_dataframe_name='problem_steps',
-                           index='Step Name',
-                           additional_columns=['Problem Name'] + kc_and_cf_cols,
-                           make_time_index=True)
+    es.normalize_entity(base_entity_id='transactions',
+                        new_entity_id='problem_steps',
+                        index='Step Name',
+                        additional_variables=['Problem Name'] + kc_and_cf_cols,
+                        make_time_index=True)
 
-    es.normalize_dataframe(base_dataframe_name='problem_steps',
-                           new_dataframe_name='problems',
-                           index='Problem Name',
-                           make_time_index=True)
+    es.normalize_entity(base_entity_id='problem_steps',
+                        new_entity_id='problems',
+                        index='Problem Name',
+                        make_time_index=True)
 
     # Every transaction has a `session` associated to a student
-    es.normalize_dataframe(base_dataframe_name='transactions',
-                           new_dataframe_name='sessions',
-                           index='Session Id',
-                           additional_columns=['Anon Student Id'],
-                           make_time_index=True)
+    es.normalize_entity(base_entity_id='transactions',
+                        new_entity_id='sessions',
+                        index='Session Id',
+                        additional_variables=['Anon Student Id'],
+                        make_time_index=True)
 
-    es.normalize_dataframe(base_dataframe_name='sessions',
-                           new_dataframe_name='students',
-                           index='Anon Student Id',
-                           make_time_index=True)
+    es.normalize_entity(base_entity_id='sessions',
+                        new_entity_id='students',
+                        index='Anon Student Id',
+                        make_time_index=True)
 
     # Every transaction has a `class` associated to a school
-    es.normalize_dataframe(base_dataframe_name='transactions',
-                           new_dataframe_name='classes',
-                           index='Class',
-                           additional_columns=['School'],
-                           make_time_index=False)
+    es.normalize_entity(base_entity_id='transactions',
+                        new_entity_id='classes',
+                        index='Class',
+                        additional_variables=['School'],
+                        make_time_index=False)
 
-    es.normalize_dataframe(base_dataframe_name='classes',
-                           new_dataframe_name='schools',
-                           index='School',
-                           make_time_index=False)
+    es.normalize_entity(base_entity_id='classes',
+                        new_entity_id='schools',
+                        index='School',
+                        make_time_index=False)
 
     # And because we might be interested in creating features grouped
     # by attempts we normalize by those as well.
-    es.normalize_dataframe(base_dataframe_name='transactions',
-                           new_dataframe_name='attempts',
-                           index='Attempt At Step',
-                           additional_columns=[],
-                           make_time_index=False)
+#     es.normalize_entity(base_entity_id='transactions',
+#                         new_entity_id='attempts',
+#                         index='Attempt At Step',
+#                         additional_variables=[],
+#                         make_time_index=False)
     return es
 
 

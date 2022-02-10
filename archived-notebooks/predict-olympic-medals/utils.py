@@ -148,7 +148,7 @@ def load_entityset(data_dir='~/olympic_games_data',
     countries.drop(['GDP per Capita', 'Population'], axis=1, inplace=True)
     # Some countries had a '*" at their end, which we need to remove
     # in order to match with economic data
-    countries['Country'] = countries['Country'].str.replace('*', '', regex=False)
+    countries['Country'] = countries['Country'].str.replace('*', '')
     countries = countries.append(
         pd.DataFrame({
             'Country': ['Unknown', 'Mixed Team'],
@@ -202,51 +202,51 @@ def load_entityset(data_dir='~/olympic_games_data',
 
     # Step 7
     es = ft.EntitySet("Olympic Games")
-    es.add_dataframe(
-        dataframe_name="medaling_athletes",
-        dataframe=athletes_at_olympic_games,
+    es.entity_from_dataframe(
+        "medaling_athletes",
+        athletes_at_olympic_games,
         index="Athlete Medal ID",
         time_index='Year')
 
-    es.add_dataframe(
-        dataframe_name="medals_won",
-        dataframe=medals_won,
+    es.entity_from_dataframe(
+        "medals_won",
+        medals_won,
         index="medal_id",
         time_index='Year')
 
-    es.normalize_dataframe(
-        base_dataframe_name="medaling_athletes",
-        new_dataframe_name="athletes",
+    es.normalize_entity(
+        base_entity_id="medaling_athletes",
+        new_entity_id="athletes",
         index="Athlete",
         make_time_index=True,
-        new_dataframe_time_index='Year of First Medal',
-        additional_columns=['Gender'])
-    es.normalize_dataframe(
-        base_dataframe_name="medals_won",
-        new_dataframe_name="countries_at_olympic_games",
+        new_entity_time_index='Year of First Medal',
+        additional_variables=['Gender'])
+    es.normalize_entity(
+        base_entity_id="medals_won",
+        new_entity_id="countries_at_olympic_games",
         index="Country Olympic ID",
         make_time_index=True,
-        new_dataframe_time_index='Year',
-        additional_columns=[
+        new_entity_time_index='Year',
+        additional_variables=[
             'City', 'Olympic Games Name', 'Olympic Games ID', 'Country'
         ])
-    es.normalize_dataframe(
-        base_dataframe_name="countries_at_olympic_games",
-        new_dataframe_name="olympic_games",
+    es.normalize_entity(
+        base_entity_id="countries_at_olympic_games",
+        new_entity_id="olympic_games",
         index="Olympic Games ID",
         make_time_index=False,
-        copy_columns=['Year'],
-        additional_columns=['City'])
-    es.normalize_dataframe(
-        base_dataframe_name="medals_won",
-        new_dataframe_name="disciplines",
+        copy_variables=['Year'],
+        additional_variables=['City'])
+    es.normalize_entity(
+        base_entity_id="medals_won",
+        new_entity_id="disciplines",
         index="Discipline",
-        new_dataframe_time_index='Debut Year',
-        additional_columns=['Sport'])
-    es.normalize_dataframe(
-        base_dataframe_name="disciplines",
-        new_dataframe_name="sports",
-        new_dataframe_time_index='Debut Year',
+        new_entity_time_index='Debut Year',
+        additional_variables=['Sport'])
+    es.normalize_entity(
+        base_entity_id="disciplines",
+        new_entity_id="sports",
+        new_entity_time_index='Debut Year',
         index="Sport")
 
     # map countries in medals_won to those in countries
@@ -286,13 +286,13 @@ def load_entityset(data_dir='~/olympic_games_data',
     countries = countries.append(
         similar, ignore_index=True, sort=True).reset_index(drop=True)
 
-    es.add_dataframe(dataframe_name="countries", dataframe=countries, index="Code")
+    es.entity_from_dataframe("countries", countries, index="Code")
 
     relationships = [
-        ft.Relationship(es, 'countries', 'Code',
-                        'countries_at_olympic_games', 'Country'),
-        ft.Relationship(es, 'medals_won', 'medal_id',
-                        'medaling_athletes', 'medal_id'),
+        ft.Relationship(es['countries']['Code'],
+                        es['countries_at_olympic_games']['Country']),
+        ft.Relationship(es['medals_won']['medal_id'],
+                        es['medaling_athletes']['medal_id']),
     ]
 
     es.add_relationships(relationships)

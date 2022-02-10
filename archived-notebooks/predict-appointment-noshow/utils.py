@@ -74,9 +74,9 @@ def plot_f1(y_test, probs, nprecs):
 
     output_notebook()
     p = figure(height=400, width=400)
-    p.line(x=threshes, y=precisions, color='green', legend_label='precision')
-    p.line(x=threshes, y=recalls, color='blue', legend_label='recall')
-    p.line(x=threshes, y=fones, color='red', legend_label='f1')
+    p.line(x=threshes, y=precisions, color='green', legend='precision')
+    p.line(x=threshes, y=recalls, color='blue', legend='recall')
+    p.line(x=threshes, y=fones, color='red', legend='f1')
     p.xaxis.axis_label = 'Threshold'
     p.title.text = 'Precision, Recall, and F1 by Threshold'
     return(p)

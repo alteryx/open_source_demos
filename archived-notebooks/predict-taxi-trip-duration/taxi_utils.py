@@ -45,8 +45,8 @@ def train_xgb(X_train, labels):
         'colsample_bytree': 0.4, 'max_depth': 9,
         'subsample': 1.0, 'lambda': 57.93,
         'booster': 'gbtree', 'gamma': 0.5,
-        'eval_metric': 'rmse',
-        'objective': 'reg:squarederror',
+        'silent': 1, 'eval_metric': 'rmse',
+        'objective': 'reg:linear',
     }
 
     model = xgb.train(params=params, dtrain=dtrain, num_boost_round=60, #227,
