@@ -30,4 +30,4 @@ The data can be found in the `dataset` directory, so the notebook can be run wit
 <img width=50% src="https://alteryx-open-source-images.s3.amazonaws.com/OpenSource_Logo-01.jpg" alt="ayx_os" />
 </p>
 
-This is a demo created & maintained by [Alteryx](https://www.alteryx.com). It uses **Featuretools** and **EvalML**, which are open source libraries maintained by Alteryx. To see the other open source projects we’re working on visit Alteryx Open Source. If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.alteryx.com/contact-us/).
+This is a demo created & maintained by [Alteryx](https://www.alteryx.com). It uses **Featuretools** and **EvalML**, which are open source libraries maintained by Alteryx. To see the other open source projects we’re working on visit [Alteryx Open Source](https://www.alteryx.com/open-source). If building impactful data science pipelines is important to you or your business, please [get in touch](https://www.alteryx.com/contact-us/).
