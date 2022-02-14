@@ -1,5 +1,7 @@
 # Predicting Daily Temperature
 
+In this tutorial, we show how Featuretools and EvalML can be used to automate time series forecasting by predicting future daily temperatures using historical daily temperature data.
+
 <a style="margin:30px" href="https://github.com/alteryx/featuretools">
     <img width=40% src="https://www.featuretools.com/wp-content/uploads/2017/12/FeatureLabs-Logo-Tangerine-800.png" alt="Featuretools" />
 </a>
@@ -7,9 +9,7 @@
     <img width=40% src="https://evalml-web-images.s3.amazonaws.com/evalml_horizontal.svg" alt="EvalML" />
 </a>
 
-In this tutorial, we show how Featuretools and EvalML can be used to automate time series forecasting by predicting future daily temperatures using historical daily temperature data.
-
-We’ll use the DailyDelhiClimate dataset, which is a combination of the [Kaggle daily climate](https://www.kaggle.com/diegozurita/daily-climate-time-series) train and test data, since we'll be handling data splitting ourselves. We'll solve this problem as a univariate time series problem, so we'll only use two of the columns from the dataset--a time index and a target daily temperatures column.
+We’ll use the [Daily Delhi Climate dataset](https://www.kaggle.com/diegozurita/daily-climate-time-series). We'll solve this problem as a univariate time series problem, so we'll only use two of the columns from the dataset (a time index column & a target daily temperatures column).
 
 <p align="center">
 <img width=50% src="figures/data_plot.png" alt="compare models" />
@@ -33,7 +33,7 @@ The results of the three pipelines built in this tutorial can be seen below. Ove
 <img width=50% src="figures/compare_models.png" alt="compare models" />
 </p>
 
-Featuretools provides a high level of customizability at the feature engineering step, which allows users to generate a wide array of time series features that can be specific to their use case. On the other hand, EvalML simplifies the entire modeling process from feature engineering to generating multiple pipelines to providing different ways of analyzing model performance.
+There are benefits to using Featuretools, ancd EvalML. Featuretools provides a high level of customizability at the feature engineering step, which allows users to generate a wide array of time series features that can be specific to their use case. On the other hand, EvalML simplifies the entire modeling process from feature engineering to generating multiple pipelines to providing different ways of analyzing model performance.
 
 ## Running the tutorial
 
