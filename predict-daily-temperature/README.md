@@ -27,7 +27,7 @@ We'll demonstrate several end-to-end workflows, starting with a baseline noteboo
 
 ## Results
 
-The results of the three pipelines built in this tutorial can be seen below. Overall, we see that models that employ more specialized feature engineering can perform better than baseline models, and we can achieve similar results using either Featuretools or EvalML.
+The results of the three pipelines built in this tutorial can be seen below. Overall, we see that models that employ more specialized feature engineering can perform better than baseline models, and we can achieve similar results using either Featuretools or EvalML. Note that the metric used to compare models is median absolute error in which lower scores indicate more accurate models.
 
 <p align="center">
 <img width=50% src="figures/compare_models.png" alt="compare models" />
