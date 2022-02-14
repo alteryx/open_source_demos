@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import featuretools as ft
 import pandas as pd
 import sklearn
+from sklearn.ensemble import RandomForestRegressor
 
 plt.rcdefaults()
 
@@ -10,6 +11,11 @@ plt.rcdefaults()
 def plot_model_performances(baseline_evalml_score, random_forest_evalml_score, baseline_score, featuretools_score):
     # data to plot
     n_groups = 2
+
+    # manual baseline 2.16
+    # featuretools run 1.63
+    # evalml baseline 2.25
+    # evalml random forest 1.6967243283642546
     evalml_runs = (baseline_evalml_score, random_forest_evalml_score)
     manual_runs = (baseline_score, featuretools_score)
 
@@ -37,6 +43,7 @@ def plot_model_performances(baseline_evalml_score, random_forest_evalml_score, b
     plt.legend()
 
     plt.tight_layout()
+    plt.savefig("figures/compare_models.png")
     plt.show()
 
 
@@ -82,7 +89,7 @@ def add_delayed_feature(df, col_to_delay, delay_length):
     return pd.concat([df, target_delay_training], axis=1)
 
 def train_and_fit_random_forest_regressor(X_train, y_train, X_test, y_test):
-    reg = sklearn.ensemble.RandomForestRegressor(n_estimators=100)
+    reg = RandomForestRegressor(n_estimators=100)
     reg.fit(X_train, y_train)
 
     # Check the accuracy of our model
@@ -90,3 +97,14 @@ def train_and_fit_random_forest_regressor(X_train, y_train, X_test, y_test):
     score = sklearn.metrics.median_absolute_error(preds, y_test)
     print('Median Abs Error: {:.2f}'.format(score))
     return reg, score
+
+
+def graph_preds_mean_and_y(preds, rolling_mean, y):
+    plt.plot(y, color='gray',label='Target')
+    plt.plot(rolling_mean, color='blue', label='Rolling Mean')
+    plt.plot(preds, color='red', label = 'Predictions')
+    plt.legend(loc='best')
+    plt.xlabel("Date")
+    plt.ylabel("Temperature (C)")
+    plt.show(block=False)
+    

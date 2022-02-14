@@ -9,16 +9,31 @@
 
 In this tutorial, we show how Featuretools and EvalML can be used to automate time series forecasting by predicting future daily temperatures using historical daily temperature data.
 
-This dataset in this tutorial only contains two columns--a time index and a target daily temperatures column. Solving this problem as a univariate time series problem lets us build a rich set of features and a useful machine learning model. We can automate the process using both [Featuretools](https://www.featuretools.com) for time series feature engineering and [EvalML](https://github.com/alteryx/evalml) for performing automated time series regression.
+We’ll use the DailyDelhiClimate dataset, which is a combination of the [Kaggle daily climate](https://www.kaggle.com/diegozurita/daily-climate-time-series) train and test data, since we'll be handling data splitting ourselves. This dataset in this tutorial only contains two columns--a time index and a target daily temperatures column.
 
-We'll demonstrate several end-to-end workflows, starting with a baseline workflow, then moving to one where we build our features using Featuretools, and finally handling everything inside of EvalML.
+<p align="center">
+<img width=50% src="figures/data_plot.png" alt="compare models" />
+</p>
+
+Solving this problem as a univariate time series problem lets us build a rich set of features and a useful machine learning model. We can automate the process using both [Featuretools](https://www.featuretools.com) for time series feature engineering and [EvalML](https://github.com/alteryx/evalml) for performing automated time series regression.
+
+We'll demonstrate several end-to-end workflows, starting with a baseline notebook, then moving to one where we build our features using Featuretools, and finally handling everything inside of EvalML.
 
 ## Highlights
 
-- Understand what makes a time series problem different from other machine learning problems
-- Show the impact that time series feature engineering has on our model
 - Quickly make end-to-end workflow using time series data and time series modeling concepts
-- Use AutoMLSearch to perform automated time series machine learning
+- Show the impact that Feturetools' time series feature engineering has on model performance
+- Use EvalML's AutoMLSearch to perform automated time series machine learning
+
+## Results
+
+The results of the three pipelines built in this tutorial can be seen below. Overall, we see that models that employ more specialized feature engineering can perform better than baseline models, and we can achieve similar results using both Featuretools and EvalML.
+
+<p align="center">
+<img width=50% src="figures/compare_models.png" alt="compare models" />
+</p>
+
+Featuretools provides a high level of customizability at the feature engineering step, and allows users to generate a wide array of time series features that can be specific to their use case. On the other hand, EvalML simplifies the entire modeling process from feature engineering to generating multiple pipelines to providing different ways of analyzing model performance.
 
 ## Running the tutorial
 
