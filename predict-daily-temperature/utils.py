@@ -12,10 +12,6 @@ def plot_model_performances(baseline_evalml_score, random_forest_evalml_score, b
     # data to plot
     n_groups = 2
 
-    # manual baseline 2.16
-    # featuretools run 1.63
-    # evalml baseline 2.25
-    # evalml random forest 1.6967243283642546
     evalml_runs = (baseline_evalml_score, random_forest_evalml_score)
     manual_runs = (baseline_score, featuretools_score)
 
@@ -36,7 +32,7 @@ def plot_model_performances(baseline_evalml_score, random_forest_evalml_score, b
             label='Manual Runs')
 
     plt.xlabel('Models')
-    plt.ylabel('Median Absolute Error')
+    plt.ylabel('Median Absolute Error (lower is better)')
     plt.title('Model Performance')
     plt.xticks(index + bar_width/2,
                ("Baseline Runs", "Feature Engineering Runs"))
