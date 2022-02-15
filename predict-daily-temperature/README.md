@@ -33,7 +33,7 @@ The results of the three pipelines built in this tutorial can be seen below. Ove
 <img width=50% src="figures/compare_models.png" alt="compare models" />
 </p>
 
-There are benefits to using Featuretools, ancd EvalML. Featuretools provides a high level of customizability at the feature engineering step, which allows users to generate a wide array of time series features that can be specific to their use case. On the other hand, EvalML simplifies the entire modeling process from feature engineering to generating multiple pipelines to providing different ways of analyzing model performance.
+There are benefits to using Featuretools, and EvalML. Featuretools provides a high level of customizability at the feature engineering step, which allows users to generate a wide array of time series features that can be specific to their use case. On the other hand, EvalML simplifies the entire modeling process from feature engineering to generating multiple pipelines to providing different ways of analyzing model performance.
 
 ## Running the tutorial
 
