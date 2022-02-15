@@ -68,12 +68,11 @@ def read_data(filepath, time_index, target_col):
     return df[[time_index, target_col]]
 
 
-def get_train_test(df, gap):
+def get_train_test(df):
     split_point = int(df.shape[0]*.7)
 
-    # leave gap observations between training and test datasets
     training_data = df[:split_point]
-    test_data = df[(split_point + gap):]
+    test_data = df[split_point:]
 
     return training_data, test_data
 
