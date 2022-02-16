@@ -67,7 +67,7 @@ It is a list of strings which will tell DFS to drop any features which match the
 
 #### Q: Why is `trips.test_data` in `drop_contains`?
 
-We don't want any features to be generated on the `test_data` column. The column is simply there to differentiate between train and test data. By putting the entity, followed by a dot, and the column name, it tell DFS to drop any aggregation features of `test_data`. If we had put just `test_data` in `drop_contains`, then it would have dropped the `test_data` column and the aggregation features of `test_data`.
+We don't want any features to be generated on the `test_data` column. The column is simply there to differentiate between train and test data. By putting the dataframe name, followed by a dot, and the column name, it tell DFS to drop any aggregation features of `test_data`. If we had put just `test_data` in `drop_contains`, then it would have dropped the `test_data` column and the aggregation features of `test_data`.
 
 #### Q: What is the model being used?
 
