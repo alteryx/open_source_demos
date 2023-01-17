@@ -7,3 +7,4 @@ findspark==1.4.2
 jupyter==1.0.0
 pyspark==3.0.0
 requests==2.27.1
+woodwork==0.11.2
