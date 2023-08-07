@@ -2,7 +2,7 @@
 
 <div class="row">
     <a href="https://www.alteryx.com/open-source">
-        <img width=100% src="https://woodwork-web-images.s3.amazonaws.com/alteryx-oss-libraries.png" alt="Alteryx Open Source Tools" />
+        <img width=100% src="https://alteryx-oss-web-images.s3.amazonaws.com/alteryx-oss-libraries.png" alt="Alteryx Open Source Tools" />
     </a>
 </div>
 
